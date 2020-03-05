@@ -23,7 +23,10 @@ let todaysWeather;
           // After the data comes back from the API
           .then(function(response) {
             todaysWeather = response.list[0].weather[0].main;
-            $(".city").text(response.city.name + " " + moment().format('ll'));
+
+            $(".city").text(response.city.name);
+            $(".todayIs").text("Today is " + moment().format('dddd') + " " + moment().format('LL'));
+
             $("<img>").appendTo(".city").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
             $(".weather").text("Temperature: " + response.list[0].main.temp + " °F");
             $(".max-temp").text("Max Temperature: " + response.list[0].main.temp_max + " °F");
