@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> /
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
     <link rel="stylesheet" href="./css/style.css">
-<!-- 
-    Open Weather API Key -->
-    <!-- 8a9c8778f33ed43d7abdebc8755bbe26 -->
 
    
 
@@ -20,17 +17,20 @@
 
 </head>
 
-<header>
+<header class="container">
     <h1 class="city"></h1>
+    <div class="weather"></div>
+    <div class="max-temp"></div>
+    <div class="min-temp"></div>
 </header>
 
 <body>
 
-    <div class="weather"></div>
-    <div class="max-temp"></div>
-    <div class="min-temp"></div>
-    <img id= "giphy">
-    <div class="quote"></div>
+    <main>
+        <img id= "giphy">
+        <div class="quote"></div>
+    </main>
+    
 
 
     <script src="moment-min-lib.js"></script>
