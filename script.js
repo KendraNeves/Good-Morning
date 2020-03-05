@@ -7,6 +7,8 @@ let zip = "90210";
 let todaysWeather;
 
 
+
+
      
     function getData() {
        
