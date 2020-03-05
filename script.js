@@ -12,7 +12,7 @@ let todaysWeather;
        
   
     // Weather.com API call   
-        var weatherURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=8a9c8778f33ed43d7abdebc8755bbe26`;
+        var weatherURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&APPID=8a9c8778f33ed43d7abdebc8755bbe26`;
   
         $.ajax({
           url: weatherURL,
@@ -21,7 +21,11 @@ let todaysWeather;
           // After the data comes back from the API
           .then(function(response) {
             todaysWeather = response.list[0].weather[0].main;
-            // $(".weather");
+            $(".city").text(city + " " + moment().format('ll'));
+            $("<img>").appendTo(".city").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
+            $(".weather").text("Temperature: " + response.list[0].main.temp + " °F");
+            $(".max-temp").text("Max Temperature: " + response.list[0].main.temp_max + " °F");
+            $(".min-temp").text("Min Temperature: " + response.list[0].main.temp_min + " °F");
             weatherResults = response;
             console.log(todaysWeather);
             console.log(weatherResults);
@@ -44,9 +48,25 @@ let todaysWeather;
 
         
         });
-               
-     
+           
+
+    //Quote API call
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://quotes15.p.rapidapi.com/quotes/random/?language_code=en",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "quotes15.p.rapidapi.com",
+            "x-rapidapi-key": "4669f6757dmshb7f8fff52ad3cd0p1237d0jsn70f7bc829884"
+        }
+    }
     
+    $.ajax(settings).done(function (response) {
+        $(".quote").text(response.content);
+        console.log(response);
+    });
+
 
     
    
