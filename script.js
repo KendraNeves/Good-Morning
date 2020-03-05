@@ -3,8 +3,10 @@ $(document).ready(function(){
 let weatherResults;
 let quoteResults;
 let giphyResults;
-let city = "baltimore";
+let zip = "90210";
 let todaysWeather;
+
+
 
 
      
@@ -12,7 +14,7 @@ let todaysWeather;
        
   
     // Weather.com API call   
-        var weatherURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&APPID=8a9c8778f33ed43d7abdebc8755bbe26`;
+        var weatherURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zip}&units=imperial&APPID=8a9c8778f33ed43d7abdebc8755bbe26`;
   
         $.ajax({
           url: weatherURL,
@@ -21,8 +23,10 @@ let todaysWeather;
           // After the data comes back from the API
           .then(function(response) {
             todaysWeather = response.list[0].weather[0].main;
-            $(".city").text(city);
+
+            $(".city").text(response.city.name);
             $(".todayIs").text("Today is " + moment().format('dddd') + " " + moment().format('LL'));
+
             $("<img>").appendTo(".city").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
             $(".weather").text("Temperature: " + response.list[0].main.temp + " °F");
             $(".max-temp").text("Max Temperature: " + response.list[0].main.temp_max + " °F");
