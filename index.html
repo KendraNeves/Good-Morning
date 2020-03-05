@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="https://momentjs.com/downloads/moment-with-locales.js">
     <title>Good Morning Page</title>
+
     <!--Materialize CDN here-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> /
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
@@ -14,15 +16,24 @@
 
    
 
+
+
 </head>
 
+<header>
+    <h1 class="city"></h1>
+</header>
 
 <body>
+
     <div class="weather"></div>
+    <div class="max-temp"></div>
+    <div class="min-temp"></div>
     <img id= "giphy">
+    <div class="quote"></div>
 
 
-    
+    <script src="moment-min-lib.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src= "script.js"></script>   
 </body>
