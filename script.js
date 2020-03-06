@@ -6,9 +6,26 @@ let giphyResults;
 let zip = "90210";
 let todaysWeather;
 
+//Initialize modal
+$(".modal").modal({
+    dismissible: false,
+    preventScrolling: true,
+    onCloseStart: () => {
+    zip = document.querySelector("#localZip").value == "" ? zip : document.querySelector("#localZip").value;
+    document.querySelector("#zipDisplay").innerHTML = zip;
+    },
+    onCloseEnd:() =>{
+        window.localStorage.setItem("GoodMorningZip", zip);
+        getData();
+    }
+});
 
-
-
+if (window.localStorage.getItem("GoodMorningZip") == null) {
+    $(".modal").modal('open');
+} else {
+    zip = window.localStorage.getItem("GoodMorningZip");
+    getData();
+}
      
     function getData() {
        
@@ -93,7 +110,6 @@ let todaysWeather;
     // });   
 }
 
-getData()
 
 });
 

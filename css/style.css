@@ -7,3 +7,9 @@
 /*
 Sets the font for all the elements.  We can change to target a specific class later if we want
 */
+
+#zipButtonDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
