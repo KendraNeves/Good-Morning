@@ -23,20 +23,17 @@ let todaysWeather;
           // After the data comes back from the API
           .then(function(response) {
             todaysWeather = response.list[0].weather[0].main;
-<<<<<<< HEAD
-<<<<<<< Updated upstream
             $(".city").text(city);
-=======
 
             $(".city").text(response.city.name);
->>>>>>> cd23d460386c50489985c54ed884a206ce5ea6d1
+
             $(".todayIs").text("Today is " + moment().format('dddd') + " " + moment().format('LL'));
 
             $("<img>").appendTo(".city").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
             $(".weather").text("Temperature: " + response.list[0].main.temp + " °F");
             $(".max-temp").text("Max Temperature: " + response.list[0].main.temp_max + " °F");
             $(".min-temp").text("Min Temperature: " + response.list[0].main.temp_min + " °F");
-=======
+
 
             $(".goodMorning").text("Good Morning!");
             $(".todayIs").text("Today is " + moment().format('dddd') + " " + moment().format('LL'));
@@ -45,7 +42,7 @@ let todaysWeather;
             $("<img>").appendTo(".temp").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
             $(".max-temp").text("Max: " + response.list[0].main.temp_max + " °F");
             $(".min-temp").text("Min: " + response.list[0].main.temp_min + " °F");
->>>>>>> Stashed changes
+
             weatherResults = response;
             console.log(todaysWeather);
             console.log(weatherResults);
