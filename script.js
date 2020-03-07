@@ -40,7 +40,7 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
           // After the data comes back from the API
           .then(function(response) {
             todaysWeather = response.list[0].weather[0].main;
-            $(".city").text(city);
+            $(".city").text(zip);
 
             $(".city").text(response.city.name);
 
