@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Cedarville+Cursive|Courgette&display=swap');
+
+
 * {
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -9,7 +12,13 @@ Sets the font for all the elements.  We can change to target a specific class la
 */
 
 #zipButtonDiv {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
 }
+
+.quote{
+    font-family: 'Bad Script', cursive;
+    font-size: xx-large;
+}
+
