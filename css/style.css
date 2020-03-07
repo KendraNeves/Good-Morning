@@ -22,3 +22,7 @@ Sets the font for all the elements.  We can change to target a specific class la
     font-size: xx-large;
 }
 
+.giphy, .quote{ 
+    margin-top: 40px;
+
+}
