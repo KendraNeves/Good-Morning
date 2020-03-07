@@ -28,6 +28,7 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
 }
      
     function getData() {
+        document.querySelector("#zipDisplay").innerHTML = zip;
        
   
     // Weather.com API call   
