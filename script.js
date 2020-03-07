@@ -40,14 +40,26 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
           // After the data comes back from the API
           .then(function(response) {
             todaysWeather = response.list[0].weather[0].main;
+            $(".city").text(city);
 
             $(".city").text(response.city.name);
+
             $(".todayIs").text("Today is " + moment().format('dddd') + " " + moment().format('LL'));
 
             $("<img>").appendTo(".city").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
             $(".weather").text("Temperature: " + response.list[0].main.temp + " °F");
             $(".max-temp").text("Max Temperature: " + response.list[0].main.temp_max + " °F");
             $(".min-temp").text("Min Temperature: " + response.list[0].main.temp_min + " °F");
+
+
+            $(".goodMorning").text("Good Morning!");
+            $(".todayIs").text("Today is " + moment().format('dddd') + " " + moment().format('LL'));
+            $(".city").text(response.city.name);
+            $(".temp").text(response.list[0].main.temp + " °F");
+            $("<img>").appendTo(".temp").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
+            $(".max-temp").text("Max: " + response.list[0].main.temp_max + " °F");
+            $(".min-temp").text("Min: " + response.list[0].main.temp_min + " °F");
+
             weatherResults = response;
             console.log(todaysWeather);
             console.log(weatherResults);
@@ -60,7 +72,7 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
             })
             .then(function(response){
                 giphyResults = response;
-                $("#giphy").attr("src", response.data[Math.floor(Math.random() *24)].images.fixed_height.url);
+                $(".giphy").attr("src", response.data[Math.floor(Math.random() *24)].images.fixed_height.url);
                 
                 console.log(giphyResults);
             });
