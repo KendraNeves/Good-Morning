@@ -17,55 +17,55 @@
 
 <body>
     <div id="background" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0;"></div>
-    <div id="foreground" style="position: absolute; top: 0; right: 0; left: 0;"></div>
-    <!-- Modal design starts here -->
-    <div id="zipCodeModal" class="modal">
-        <div class="modal-content">
-            <h4>Good Morning</h4>
-            <p>In order to show you local information,
-                we need to know your ZIP code</p>
-                <p>(Leave blank to not share ZIP)</p>
-                <input type="text" name="localZip" id="localZip" placeholder="ZIP code">
-            
+    <div id="foreground" style="position: absolute; top: 0; right: 0; left: 0;">
+        <!-- Modal design starts here -->
+        <div id="zipCodeModal" class="modal">
+            <div class="modal-content">
+                <h4>Good Morning</h4>
+                <p>In order to show you local information,
+                    we need to know your ZIP code</p>
+                    <p>(Leave blank to not share ZIP)</p>
+                    <input type="text" name="localZip" id="localZip" placeholder="ZIP code">
+                
+            </div>
+            <div class="modal-footer blue">
+                <a href="#" class="btn modal-close purple">OK</a>
+            </div>
         </div>
-        <div class="modal-footer blue">
-            <a href="#" class="btn modal-close purple">OK</a>
-        </div>
-    </div>
 
-    <!-- actual body of page  -->
-<header class="container">
-        <h1 class="goodMorning center"></h1>
-        <h3 class="todayIs center"></h3>
+        <!-- actual body of page  -->
+    <header class="container">
+            <h1 class="goodMorning center"></h1>
+            <h3 class="todayIs center"></h3>
 
-    <div class="row">
-            <div class="col s3"></div>
-            <h3 class="city left-align col s3"></h3>
-        <div class="center col s3 left-align">
-            <div class="temp left-align"></div>
-            <div class="left-align max-temp"></div>
-            <div class="left-align min-temp"></div>
-        </div>
-            <div class=" col s3"></div>
-
-    </div>
-     
-
-</header>
-
-<body>
-
-    <main class="container">
         <div class="row">
-            <img class= "giphy col s12 m5">
-            <div class="col m1"></div>
-            <div class="quote col s12 m6"></div>
+                <div class="col s3"></div>
+                <h3 class="city left-align col s3"></h3>
+            <div class="center col s3 left-align">
+                <div class="temp left-align"></div>
+                <div class="left-align max-temp"></div>
+                <div class="left-align min-temp"></div>
+            </div>
+                <div class=" col s3"></div>
+
         </div>
-    </main>
-    
+        
 
-    <div id="zipButtonDiv"><a id="zipCodeBtn" href="#zipCodeModal" class="btn orange modal-trigger">Change Location (<span id="zipDisplay">90210</span>)</a></div>
+    </header>
 
+    <body>
+
+        <main class="container">
+            <div class="row">
+                <img class= "giphy col s12 m5">
+                <div class="col m1"></div>
+                <div class="quote col s12 m6"></div>
+            </div>
+        </main>
+        
+
+        <div id="zipButtonDiv"><a id="zipCodeBtn" href="#zipCodeModal" class="btn orange modal-trigger">Change Location (<span id="zipDisplay">90210</span>)</a></div>
+        </div>
     <script src="moment-min-lib.js"></script>
 
     <script src= "script.js"></script>   
