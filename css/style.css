@@ -20,9 +20,11 @@ Sets the font for all the elements.  We can change to target a specific class la
 .quote{
     font-family: 'Bad Script', cursive;
     font-size: xx-large;
+    margin-top: 40px;
 }
 
-.giphy, .quote{ 
-    margin-top: 40px;
 
+.giphy{
+    max-height: 375px;
+    margin-top: 20px;
 }

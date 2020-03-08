@@ -40,7 +40,7 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
         })
           // After the data comes back from the API
           .then(function(response) {
-            todaysWeather = response.list[0].weather[0].main;
+            todaysWeather = response.list[0].weather[0].main + " sky";
             $(".city").text(zip);
 
             $(".city").text(response.city.name);
@@ -56,8 +56,9 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
             $(".goodMorning").text("Good Morning!");
             $(".todayIs").text("Today is " + moment().format('dddd') + " " + moment().format('LL'));
             $(".city").text(response.city.name);
+            $(".icon").html("");
+            $("<img>").appendTo(".icon").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
             $(".temp").text(response.list[0].main.temp + " °F");
-            $("<img>").appendTo(".temp").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
             $(".max-temp").text("Max: " + response.list[0].main.temp_max + " °F");
             $(".min-temp").text("Min: " + response.list[0].main.temp_min + " °F");
 
