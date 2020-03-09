@@ -23,8 +23,17 @@ Sets the font for all the elements.  We can change to target a specific class la
     margin-top: 40px;
 }
 
+#background {
+    background-image: url(./day.PNG);
+    background-size: cover;
+}
+
+.night #background {
+    background-image: url(./night.PNG);
+}
 
 .giphy{
     max-height: 375px;
     margin-top: 20px;
 }
+
