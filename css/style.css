@@ -20,11 +20,7 @@ Sets the font for all the elements.  We can change to target a specific class la
 .quote{
     font-family: 'Bad Script', cursive;
     font-size: xx-large;
-}
-
-.giphy, .quote{ 
     margin-top: 40px;
-
 }
 
 #background {
@@ -35,3 +31,9 @@ Sets the font for all the elements.  We can change to target a specific class la
 .night #background {
     background-image: url(./night.PNG);
 }
+
+.giphy{
+    max-height: 375px;
+    margin-top: 20px;
+}
+
