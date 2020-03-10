@@ -16,8 +16,11 @@
 </head>
 
 <body >
+    
     <div id="background" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0;"></div>
     <div id="foreground" style="position: absolute; top: 0; right: 0; left: 0;">
+
+ 
         <!-- Modal design starts here -->
         <div id="zipCodeModal" class="modal">
             <div class="modal-content">
@@ -32,8 +35,9 @@
                 <a href="#" class="btn modal-close purple">OK</a>
             </div>
         </div>
-
+    
         <!-- actual body of page  -->
+    <div class= "opaqueBackground">
     <header class="container">
             <h1 class="goodMorning center"></h1>
             <h3 class="todayIs center"></h3>
@@ -54,8 +58,6 @@
 
     </header>
 
-    <body>
-
         <main class="container">
             <div class="row">
                 <img class= "giphy col s12 m5">
@@ -63,12 +65,15 @@
                 <div class="quote col s12 m6"></div>
             </div>
         </main>
+    </div>
         
 
         <div id="zipButtonDiv"><a id="zipCodeBtn" href="#zipCodeModal" class="btn orange modal-trigger">Change Location (<span id="zipDisplay">90210</span>)</a></div>
-        </div>
+        
     <script src="moment-min-lib.js"></script>
 
     <script src= "script.js"></script>   
+
+</div>
 </body>
 </html>

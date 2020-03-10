@@ -2,7 +2,7 @@
 
 ## Project Description
 
-A page that will greet the user with the date, the weather, a funny gif about the weather, and an inspirational quote.
+A page that will greet the user with the date, the weather, a gif about the weather, and an inspirational quote.
 
  ## User Story
     
@@ -16,7 +16,7 @@ SO THAT I can start my day with a positive attitude
 
 - Weather.com API
 - Giphy API
-- Quotable Quotes API
+- Quotes API
 
 ## Breakdown of Tasks
 

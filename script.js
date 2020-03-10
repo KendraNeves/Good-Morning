@@ -5,6 +5,20 @@ let quoteResults;
 let giphyResults;
 let zip = "90210";
 let todaysWeather;
+let greeting;
+let currentTime = moment().format("H")
+
+
+// Checks time and change background picture 
+if (currentTime >= 19){
+    document.querySelector("body").classList.add("night");
+    greeting = "Good Evening";
+}
+else {
+    
+    greeting = "Good Morning";
+}
+
 
 //Initialize modal
 $(".modal").modal({
@@ -27,12 +41,13 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
     getData();
 }
      
+
     function getData() {
         document.querySelector("#zipDisplay").innerHTML = zip;
        
   
     // Weather.com API call   
-        var weatherURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zip}&units=imperial&APPID=8a9c8778f33ed43d7abdebc8755bbe26`;
+        var weatherURL = `https://api.openweathermap.org/data/2.5/forecast?zip=${zip}&units=imperial&APPID=8a9c8778f33ed43d7abdebc8755bbe26`;
   
         $.ajax({
           url: weatherURL,
@@ -47,17 +62,17 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
 
             $(".todayIs").text("Today is " + moment().format('dddd') + " " + moment().format('LL'));
 
-            $("<img>").appendTo(".city").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
+            $("<img>").appendTo(".city").attr("src", `https://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
             $(".weather").text("Temperature: " + response.list[0].main.temp + " °F");
             $(".max-temp").text("Max Temperature: " + response.list[0].main.temp_max + " °F");
             $(".min-temp").text("Min Temperature: " + response.list[0].main.temp_min + " °F");
 
 
-            $(".goodMorning").text("Good Morning!");
+            $(".goodMorning").text(greeting);
             $(".todayIs").text("Today is " + moment().format('dddd') + " " + moment().format('LL'));
             $(".city").text(response.city.name);
             $(".icon").html("");
-            $("<img>").appendTo(".icon").attr("src", `http://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
+            $("<img>").appendTo(".icon").attr("src", `https://openweathermap.org/img/w/${response.list[0].weather[0].icon}.png`); //ICON
             $(".temp").text(response.list[0].main.temp + " °F");
             $(".max-temp").text("Max: " + response.list[0].main.temp_max + " °F");
             $(".min-temp").text("Min: " + response.list[0].main.temp_min + " °F");
@@ -103,25 +118,7 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
         console.log(response);
     });
 
-
-    
-   
-
-    //Quote API call
-    // var settings = {
-    //     "async": true,
-    //     "crossDomain": true,
-    //     "url": "https://quotable-quotes.p.rapidapi.com/randomQuotes",
-    //     "method": "GET",
-    //     "headers": {
-    //         "x-rapidapi-host": "quotable-quotes.p.rapidapi.com",
-    //         "x-rapidapi-key": "4669f6757dmshb7f8fff52ad3cd0p1237d0jsn70f7bc829884"
-    //     }
-    // }
-    
-    // $.ajax(settings).done(function (response) {
-    //     console.log(response);
-    // });   
+ 
 }
 
 
