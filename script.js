@@ -124,3 +124,8 @@ if (window.localStorage.getItem("GoodMorningZip") == null) {
 
 });
 
+// for presentation purposes
+
+function dayNight() {
+    document.querySelector("body").classList.toggle("night");
+}
