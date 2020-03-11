@@ -6,6 +6,10 @@
 * {
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
+    color: #2C365E;
+}
+
+.night * {
     color: #605C4E;
 }
 
@@ -53,12 +57,18 @@
 }
 
 .night #background {
-    background-image: url(./night.PNG);
+    background-image: url(./night.PNG);    
 }
 
 .giphy{
     max-height: 375px;
-    margin-top: 20px;
     opacity: 1;
 }
 
+header {
+    font-size: large;
+}
+
+.goodMorning, .todayIs {
+    font-weight: bold;
+}
