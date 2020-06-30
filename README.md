@@ -1,8 +1,8 @@
-# Good Morning Page
+# Good Morning App
 
 ## Project Description
 
-A page that will greet the user with the date, the weather, a gif about the weather, and an inspirational quote.
+An app that greets the user with the date, the weather, a gif about the weather, and an inspirational quote.
 
  ## User Story
     
@@ -12,28 +12,11 @@ I WANT a webpage that will greet me in the morning, tell me the date, the weathe
 
 SO THAT I can start my day with a positive attitude 
 
-## API's To Be Used
+## API's Used
 
 - Weather.com API
 - Giphy API
 - Quotes API
-
-## Breakdown of Tasks
-
-- HTML Wireframe
-
-Javascript
-- AJAX call weather.com API
-- Display weather info 
-- AJAX call Giphy API
-- Display gif
-- AJAX call Quotable Quotes API
-- Display quote
-- Decorate page with materialize
-
-
-
-<!-- ## Acceptance Criteria -->
 
 
 
