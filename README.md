@@ -2,7 +2,7 @@
 
 An uplifting app that greets the user with the date, the weather, a gif about the weather, and an inspirational quote.
 
-![Good Morning App](./good-morning-app.PNG)
+![Good Morning App](./assets/good-morning-app.PNG)
 
 ## [Deployed App!](https://kendraneves.github.io/Good-Morning/)
 
@@ -48,7 +48,7 @@ There is no back-end to this project, so you just need to open index.html in the
 
 ---
 
-[![](https://img.shields.io/badge/gitHub-KendraNeves-green?style=plastic)](https://github.com/KendraNeves) |
+<img src="./assets/profile-pic.JPG " alt="profile picture" width="150px;"/>[![](https://img.shields.io/badge/gitHub-KendraNeves-green?style=plastic)](https://github.com/KendraNeves) |
 [![](https://img.shields.io/badge/email-kendraneves@gmail.com-teal?style=plastic)](mailto:kendraneves@gmail.com)
 
 [![](https://img.shields.io/badge/gitHub-kdeguzm3-green?style=plastic)](https://github.com/kdeguzm3) |
